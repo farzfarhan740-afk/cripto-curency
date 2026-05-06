@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FarhanZz Crypto Academy</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  color: white;
+  background: url('https://images.unsplash.com/photo-1621761191319-c6fb62004040') no-repeat center/cover;
+}
+
+/* overlay biar teks jelas */
+.overlay {
+  background: rgba(0,0,0,0.75);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* header */
+h1 {
+  text-align: center;
+  color: gold;
+}
+
+/* card */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* button */
+button {
+  background: gold;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* navbar */
+.nav {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.nav button {
+  width: auto;
+}
+
+/* hidden section */
+.section {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+</style>
+</head>
+
+<body>
+<div class="overlay">
+
+<h1>🚀 FarhanZz Crypto Academy</h1>
+<p style="text-align:center;">Belajar crypto dari nol sampai cuan</p>
+
+<!-- NAV -->
+<div class="nav">
+  <button onclick="show('home')">Home</button>
+  <button onclick="show('level1')">Pemula</button>
+  <button onclick="show('level2')">Menengah</button>
+  <button onclick="show('level3')">Cuan</button>
+</div>
+
+<!-- HOME -->
+<div id="home" class="section active">
+  <div class="card">
+    <h2>🔥 Apa itu Crypto?</h2>
+    <p>Crypto adalah aset digital berbasis blockchain. Contohnya Bitcoin.</p>
+  </div>
+
+  <div class="card">
+    <h2>⚠️ Risiko</h2>
+    <p>Harga bisa naik turun sangat cepat (volatile).</p>
+  </div>
+</div>
+
+<!-- LEVEL 1 -->
+<div id="level1" class="section">
+  <div class="card">
+    <h2>📚 Level 1: Pemula</h2>
+    <ul>
+      <li>Apa itu Bitcoin</li>
+      <li>Apa itu Blockchain</li>
+      <li>Cara buat Wallet</li>
+      <li>Private Key & Security</li>
+    </ul>
+  </div>
+</div>
+
+<!-- LEVEL 2 -->
+<div id="level2" class="section">
+  <div class="card">
+    <h2>⚙️ Level 2: Menengah</h2>
+    <ul>
+      <li>Cara beli crypto di exchange</li>
+      <li>Market (Bullish & Bearish)</li>
+      <li>Support & Resistance</li>
+      <li>Dasar Analisis</li>
+    </ul>
+  </div>
+</div>
+
+<!-- LEVEL 3 -->
+<div id="level3" class="section">
+  <div class="card">
+    <h2>💰 Level 3: Menghasilkan</h2>
+    <ul>
+      <li>Airdrop gratis</li>
+      <li>Trading dasar</li>
+      <li>Staking</li>
+      <li>Affiliate crypto</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🎥 Video Belajar</h2>
+    <iframe width="100%" height="200"
+    src="https://www.youtube.com/embed/H4Tu7IFaUIQ"
+    frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <button onclick="alert('Mulai Cuan 🚀')">Mulai Sekarang</button>
+</div>
+
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+  </html>
