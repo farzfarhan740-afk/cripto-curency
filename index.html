@@ -3,174 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FarhanZz Crypto Academy</title>
+<title>FarhanZz Crypto AI</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial;
   color: white;
-  background: url('https://images.unsplash.com/photo-1621761191319-c6fb62004040') no-repeat center/cover;
+  background: black;
 }
 
-.overlay {
-  background: rgba(0,0,0,0.75);
-  min-height: 100vh;
-  padding: 20px;
-}
-
-h1 {
-  text-align: center;
-  color: #b366ff;
-}
-
-/* CARD */
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-}
-
-/* BUTTON UNGU */
-button {
-  background: #7b2cff;
-  border: none;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
+/* Background Crypto */
+.bg {
+  position: fixed;
   width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1621761191319-c6fb62004040') no-repeat center;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px;
+  font-size: 28px;
   font-weight: bold;
+}
+
+/* Card */
+.card {
+  background: #111;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+
+/* AI Box */
+.ai-box {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Tombol (tetap style lama kalau mau) */
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: purple;
   color: white;
+  margin-top: 10px;
 }
 
-.nav {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-}
-
-.nav button {
-  width: auto;
-}
-
-.section {
-  display: none;
-}
-
-.active {
-  display: block;
+/* Output */
+#output {
+  margin-top: 20px;
+  font-size: 18px;
+  color: cyan;
 }
 </style>
+
 </head>
-
 <body>
-<div class="overlay">
 
-<h1>🚀 FarhanZz Crypto Academy</h1>
-<p style="text-align:center;">Belajar crypto dari nol sampai menghasilkan uang</p>
+<div class="bg"></div>
 
-<!-- NAV -->
-<div class="nav">
-  <button onclick="show('home')">Home</button>
-  <button onclick="show('level1')">Pemula</button>
-  <button onclick="show('level2')">Menengah</button>
-  <button onclick="show('level3')">Cuan</button>
+<header>
+🚀 FarhanZz Crypto AI Analyzer
+</header>
+
+<!-- AI ANALISA -->
+<div class="card ai-box">
+  <h2>🤖 AI Analisa Crypto</h2>
+  <p>Masukkan nama koin (BTC, ETH, dll)</p>
+
+  <input type="text" id="coin" placeholder="Contoh: BTC">
+  <br>
+  <button onclick="analisa()">Analisa Sekarang</button>
+
+  <div id="output"></div>
 </div>
 
-<!-- HOME -->
-<div id="home" class="section active">
-  <div class="card">
-    <h2>🔥 Apa itu Crypto?</h2>
-    <p>
-      Crypto adalah aset digital berbasis teknologi blockchain yang tidak dikontrol bank.
-      Contoh paling terkenal adalah Bitcoin.
-    </p>
-  </div>
+<!-- PEMBELAJARAN CRYPTO -->
+<div class="card">
+  <h2>📚 Pembelajaran Crypto</h2>
 
-  <div class="card">
-    <h2>⚠️ Risiko Crypto</h2>
-    <ul>
-      <li>Harga naik turun sangat cepat (volatil)</li>
-      <li>Banyak scam project</li>
-      <li>Salah kirim wallet = uang hilang</li>
-    </ul>
-  </div>
+  <h3>💰 Apa itu Crypto?</h3>
+  <p>
+  Crypto adalah aset digital berbasis blockchain. Contoh paling terkenal adalah Bitcoin.
+  Crypto tidak dikontrol bank dan bisa digunakan untuk investasi atau transaksi.
+  </p>
+
+  <h3>📈 Cara Analisa Crypto</h3>
+  <p>
+  1. Lihat trend (naik/turun) <br>
+  2. Volume market <br>
+  3. News & sentimen <br>
+  4. Support & resistance <br>
+  </p>
+
+  <h3>⚠️ Risiko</h3>
+  <p>
+  Crypto sangat volatile. Bisa naik cepat, tapi juga turun drastis.
+  Jangan all-in tanpa strategi.
+  </p>
 </div>
 
-<!-- LEVEL 1 -->
-<div id="level1" class="section">
-  <div class="card">
-    <h2>📚 Level 1: Pemula</h2>
-    <ul>
-      <li>Bitcoin = uang digital</li>
-      <li>Blockchain = sistem pencatatan transparan</li>
-      <li>Wallet = tempat simpan crypto</li>
-      <li>Private Key = kunci akses (jangan kasih siapa pun)</li>
-    </ul>
-  </div>
+<!-- PEMBELAJARAN AI -->
+<div class="card">
+  <h2>🤖 Pembelajaran AI</h2>
 
-  <div class="card">
-    <h3>📌 Cara Mulai</h3>
-    <ol>
-      <li>Download wallet (Trust Wallet / MetaMask)</li>
-      <li>Daftar exchange</li>
-      <li>Beli crypto pertama</li>
-    </ol>
-  </div>
-</div>
+  <h3>Apa itu AI?</h3>
+  <p>
+  AI adalah teknologi yang bisa menganalisa data dan memberi keputusan otomatis.
+  Dalam crypto, AI digunakan untuk membaca market dan membantu trading.
+  </p>
 
-<!-- LEVEL 2 -->
-<div id="level2" class="section">
-  <div class="card">
-    <h2>⚙️ Level 2: Menengah</h2>
-    <ul>
-      <li>Bullish = harga naik</li>
-      <li>Bearish = harga turun</li>
-      <li>Support = batas bawah harga</li>
-      <li>Resistance = batas atas harga</li>
-    </ul>
-  </div>
+  <h3>AI di Crypto</h3>
+  <p>
+  - Prediksi harga (berdasarkan data) <br>
+  - Analisa trend <br>
+  - Bot trading otomatis <br>
+  </p>
 
-  <div class="card">
-    <h3>📊 Analisis Dasar</h3>
-    <ul>
-      <li>Trend (arah harga)</li>
-      <li>Volume</li>
-      <li>Candlestick</li>
-    </ul>
-  </div>
-</div>
-
-<!-- LEVEL 3 -->
-<div id="level3" class="section">
-  <div class="card">
-    <h2>💰 Level 3: Menghasilkan</h2>
-    <ul>
-      <li>Airdrop = gratis crypto</li>
-      <li>Trading = beli murah jual mahal</li>
-      <li>Staking = simpan dapat bunga</li>
-      <li>Affiliate = promosi & dapat komisi</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>🎥 Video Belajar (Timoty Ronald)</h2>
-    <iframe width="100%" height="200"
-    src="https://www.youtube.com/embed/4g1l6kz7sLQ"
-    frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <button onclick="alert('Gas cuan 🚀')">Mulai Sekarang</button>
-</div>
-
+  <h3>Level Pro</h3>
+  <p>
+  AI profesional menggunakan machine learning + data real-time dari market global.
+  </p>
 </div>
 
 <script>
-function show(id){
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+function analisa() {
+  let coin = document.getElementById("coin").value.toUpperCase();
+  let hasil = document.getElementById("output");
+
+  if(coin === "") {
+    hasil.innerHTML = "Masukkan coin dulu!";
+    return;
+  }
+
+  // Simulasi AI
+  let random = Math.random();
+
+  if(random > 0.6){
+    hasil.innerHTML = coin + " 📈 Trend Naik (Bullish)<br>Rekomendasi: BUY";
+  } else if(random > 0.3){
+    hasil.innerHTML = coin + " ⚖️ Sideways<br>Rekomendasi: WAIT";
+  } else {
+    hasil.innerHTML = coin + " 📉 Trend Turun (Bearish)<br>Rekomendasi: SELL";
+  }
 }
 </script>
 
