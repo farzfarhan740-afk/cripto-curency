@@ -13,20 +13,18 @@ body {
   background: url('https://images.unsplash.com/photo-1621761191319-c6fb62004040') no-repeat center/cover;
 }
 
-/* overlay biar teks jelas */
 .overlay {
   background: rgba(0,0,0,0.75);
   min-height: 100vh;
   padding: 20px;
 }
 
-/* header */
 h1 {
   text-align: center;
-  color: gold;
+  color: #b366ff;
 }
 
-/* card */
+/* CARD */
 .card {
   background: rgba(255,255,255,0.05);
   padding: 15px;
@@ -35,18 +33,18 @@ h1 {
   backdrop-filter: blur(10px);
 }
 
-/* button */
+/* BUTTON UNGU */
 button {
-  background: gold;
+  background: #7b2cff;
   border: none;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
   width: 100%;
   font-weight: bold;
+  color: white;
 }
 
-/* navbar */
 .nav {
   display: flex;
   gap: 10px;
@@ -57,7 +55,6 @@ button {
   width: auto;
 }
 
-/* hidden section */
 .section {
   display: none;
 }
@@ -72,7 +69,7 @@ button {
 <div class="overlay">
 
 <h1>🚀 FarhanZz Crypto Academy</h1>
-<p style="text-align:center;">Belajar crypto dari nol sampai cuan</p>
+<p style="text-align:center;">Belajar crypto dari nol sampai menghasilkan uang</p>
 
 <!-- NAV -->
 <div class="nav">
@@ -86,12 +83,19 @@ button {
 <div id="home" class="section active">
   <div class="card">
     <h2>🔥 Apa itu Crypto?</h2>
-    <p>Crypto adalah aset digital berbasis blockchain. Contohnya Bitcoin.</p>
+    <p>
+      Crypto adalah aset digital berbasis teknologi blockchain yang tidak dikontrol bank.
+      Contoh paling terkenal adalah Bitcoin.
+    </p>
   </div>
 
   <div class="card">
-    <h2>⚠️ Risiko</h2>
-    <p>Harga bisa naik turun sangat cepat (volatile).</p>
+    <h2>⚠️ Risiko Crypto</h2>
+    <ul>
+      <li>Harga naik turun sangat cepat (volatil)</li>
+      <li>Banyak scam project</li>
+      <li>Salah kirim wallet = uang hilang</li>
+    </ul>
   </div>
 </div>
 
@@ -100,11 +104,20 @@ button {
   <div class="card">
     <h2>📚 Level 1: Pemula</h2>
     <ul>
-      <li>Apa itu Bitcoin</li>
-      <li>Apa itu Blockchain</li>
-      <li>Cara buat Wallet</li>
-      <li>Private Key & Security</li>
+      <li>Bitcoin = uang digital</li>
+      <li>Blockchain = sistem pencatatan transparan</li>
+      <li>Wallet = tempat simpan crypto</li>
+      <li>Private Key = kunci akses (jangan kasih siapa pun)</li>
     </ul>
+  </div>
+
+  <div class="card">
+    <h3>📌 Cara Mulai</h3>
+    <ol>
+      <li>Download wallet (Trust Wallet / MetaMask)</li>
+      <li>Daftar exchange</li>
+      <li>Beli crypto pertama</li>
+    </ol>
   </div>
 </div>
 
@@ -113,10 +126,19 @@ button {
   <div class="card">
     <h2>⚙️ Level 2: Menengah</h2>
     <ul>
-      <li>Cara beli crypto di exchange</li>
-      <li>Market (Bullish & Bearish)</li>
-      <li>Support & Resistance</li>
-      <li>Dasar Analisis</li>
+      <li>Bullish = harga naik</li>
+      <li>Bearish = harga turun</li>
+      <li>Support = batas bawah harga</li>
+      <li>Resistance = batas atas harga</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>📊 Analisis Dasar</h3>
+    <ul>
+      <li>Trend (arah harga)</li>
+      <li>Volume</li>
+      <li>Candlestick</li>
     </ul>
   </div>
 </div>
@@ -126,21 +148,21 @@ button {
   <div class="card">
     <h2>💰 Level 3: Menghasilkan</h2>
     <ul>
-      <li>Airdrop gratis</li>
-      <li>Trading dasar</li>
-      <li>Staking</li>
-      <li>Affiliate crypto</li>
+      <li>Airdrop = gratis crypto</li>
+      <li>Trading = beli murah jual mahal</li>
+      <li>Staking = simpan dapat bunga</li>
+      <li>Affiliate = promosi & dapat komisi</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>🎥 Video Belajar</h2>
+    <h2>🎥 Video Belajar (Timoty Ronald)</h2>
     <iframe width="100%" height="200"
-    src="https://www.youtube.com/embed/H4Tu7IFaUIQ"
+    src="https://www.youtube.com/embed/4g1l6kz7sLQ"
     frameborder="0" allowfullscreen></iframe>
   </div>
 
-  <button onclick="alert('Mulai Cuan 🚀')">Mulai Sekarang</button>
+  <button onclick="alert('Gas cuan 🚀')">Mulai Sekarang</button>
 </div>
 
 </div>
@@ -153,4 +175,4 @@ function show(id){
 </script>
 
 </body>
-  </html>
+</html>
