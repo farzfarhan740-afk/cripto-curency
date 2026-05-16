@@ -82,15 +82,47 @@ button {
 
 <!-- AI ANALISA -->
 <div class="card ai-box">
-  <h2>🤖 AI Analisa Crypto</h2>
-  <p>Masukkan nama koin (BTC, ETH, dll)</p>
+ <script>
+async function analisaCrypto() {
+  let coin = document.getElementById("coinInput").value.toLowerCase()
 
-  <input type="text" id="coin" placeholder="Contoh: BTC">
-  <br>
-  <button onclick="analisa()">Analisa Sekarang</button>
+  if (!coin) {
+    alert("Masukkan nama coin dulu!")
+    return
+  }
 
-  <div id="output"></div>
-</div>
+  try {
+    let url = `https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd&include_24hr_change=true`
+
+    let res = await fetch(url)
+    let data = await res.json()
+
+    if (!data[coin]) {
+      document.getElementById("hasil").innerHTML = "Coin tidak ditemukan ❌"
+      return
+    }
+
+    let harga = data[coin].usd
+    let change = data[coin].usd_24h_change
+
+    let analisa = ""
+
+    if (change > 0) {
+      analisa = "📈 Bullish (Naik)"
+    } else {
+      analisa = "📉 Bearish (Turun)"
+    }
+
+    document.getElementById("hasil").innerHTML =
+      `Harga: $${harga} <br> Perubahan 24h: ${change.toFixed(2)}% <br> Analisa: ${analisa}`
+
+  } catch (error) {
+    document.getElementById("hasil").innerHTML = "Error ambil data ❌"
+  }
+}
+ </script> 
+
+  
 
 
 
