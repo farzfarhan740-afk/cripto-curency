@@ -81,47 +81,25 @@ button {
 </header>
 
 <!-- AI ANALISA -->
-<div class="card ai-box">
- <script>
-async function analisaCrypto() {
-  let coin = document.getElementById("coinInput").value.toLowerCase()
+<div style="text-align:center; margin-top:20px;">
+  <input id="coinInput" placeholder="Contoh: bitcoin"
+    style="padding:12px; width:80%; border-radius:10px; border:none;">
 
-  if (!coin) {
-    alert("Masukkan nama coin dulu!")
-    return
-  }
+  <br><br>
 
-  try {
-    let url = `https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd&include_24hr_change=true`
+  <button onclick="analisaCrypto()"
+    style="padding:12px 25px; background:purple; color:white; border:none; border-radius:10px;">
+    Analisa Sekarang
+  </button>
 
-    let res = await fetch(url)
-    let data = await res.json()
-
-    if (!data[coin]) {
-      document.getElementById("hasil").innerHTML = "Coin tidak ditemukan ❌"
-      return
-    }
-
-    let harga = data[coin].usd
-    let change = data[coin].usd_24h_change
-
-    let analisa = ""
-
-    if (change > 0) {
-      analisa = "📈 Bullish (Naik)"
-    } else {
-      analisa = "📉 Bearish (Turun)"
-    }
-
-    document.getElementById("hasil").innerHTML =
-      `Harga: $${harga} <br> Perubahan 24h: ${change.toFixed(2)}% <br> Analisa: ${analisa}`
-
-  } catch (error) {
-    document.getElementById("hasil").innerHTML = "Error ambil data ❌"
-  }
+  <p id="hasil" style="margin-top:20px;"></p>
+</div>
+ 
+<script>
+function analisaCrypto() {
+  document.getElementById("hasil").innerHTML = "AI sedang menganalisa..."
 }
- </script> 
-
+</script>
   
 
 
